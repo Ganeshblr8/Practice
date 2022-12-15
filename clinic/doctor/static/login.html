@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Login</title>
+  
+</head>
+<body>
+  <header>
+    <div class="main">
+      <div class="logo">
+        <img src="{%static 'media/Isha_Logo.jpg'%}">
+      </div>
+      <ul>
+        <li><a href="company">About</a></li>
+        <li><a href="services">Services</a></li>
+        <li><a href="contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div>
+      <button type="button"><span></span>Login | </button>
+      <button type="button"><span></span><a href="doctor_validate" class="btn">As Doctor</a></button>
+        <button type="button"><span></span><a href="patient_validate" class="btn">As Patient</a></button>
+      <button type="button"><span></span><button class="dropbtn" class="btn">Register</button>
+      <button type="button"><span></span><a href="doctor_register" class="btn">As Doctor</a></button>
+        <button type="button"><span></span><a href="patient_register" class="btn">As Patient</a></button>
+    </div>
+    </div>
+  </header>
+</body>
+</html>

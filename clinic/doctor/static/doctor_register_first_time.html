@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Registration</title>
+<style>
+    form {border: 3px solid #f1f1f1; background-color: lightblue; border-radius: 20pt; align-self: center;}
+    label {size: 130pt; font-family: Verdana, Geneva, Tahoma, sans-serif}
+    input {size: 130pt; font-family: Verdana, Geneva, Tahoma, sans-serif}
+</style>
+</head>
+<body>
+    <form action="{% url 'save_doctor_details' %}" method="post">
+        {% csrf_token %}
+        <label for="doctorname">Doctor Name</label>    
+        <input class="input-field" type="text" name="doctorname" placeholder="Enter Name"></input>
+        <br>
+        <br>
+
+        <label for="doctormobile">Doctor Mobile</label>    
+        <input class="input-field" type="number" name="doctormobile" placeholder="Enter Mobile"></input>
+        <br>
+        <br>
+
+        <label for="password">Doctor Password</label>    
+        <input class="input-field" type="password" name="password" placeholder="Enter Password"></input>
+        <br>
+        <br>
+        <button>Submit</button>
+
+    </form>
+</body>
+</html>

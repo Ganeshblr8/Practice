@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+    <div class="w3-bar w3-black">
+        <a href="#" class="w3-bar-item w3-button">General Info</a>
+        <a href="reset_password_doctor" class="w3-bar-item w3-button">Reset Password</a>
+        <a href="#" class="w3-bar-item w3-button">Setting</a>
+        <a href="#" class="w3-bar-item w3-button">Invoices</a>
+      </div>
+    <form action="{% url 'reset_password_doctor' %}" method="POST">
+        {% csrf_token %}
+    <label for="password">Reset password</label>
+    <br>
+    <label for="oldpassword">Old password</label>
+    <input type="password" name="oldpassword">
+    <br>
+    <label for="newpassword">New password</label>
+    <input type="password" name="newpassword">
+    <button>Update</button>
+    </form>
+</body>
+</html>

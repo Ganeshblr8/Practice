@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Registration</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="main">
+    <div class="register">
+    <h1>Enter your details</h1>
+    
+    <form id="doctor_register" method="post" action="{% url 'doctor_register' %}">
+    {% csrf_token %}
+    <!--<label for="id">ID:</label>
+    <input type="number" name="id">
+    <br>
+    <br>-->    
+    <label for="name">Doctor Name:</label>
+    <input type="text" name="doctorname" id="doctorname">
+    <br>
+    <br>
+    <label for="doctormobile">Mobile:</label>
+    <input type="number" name="doctormobile" id="doctormobile">
+    <br>
+    <br>
+    <label for="pass">Password</label>
+    <input type="password" name="password" id="password">
+    <button>Submit</button>
+   </form>
+    </div>
+    </div>
+    <button type="submit"><a href=".">Go to Home</a></button>
+</body>
+</html>

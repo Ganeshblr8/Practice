@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Home Page</title>
+    {% load static %}
+    <link rel="stylesheet" a href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>Welcome Dr. {{ doctorname }}</h1>
+    <div class="figma">
+        
+    </div>
+   
+    <div class="sidenav">
+    <form border="1" action="{% url 'show_patient_details_to_doctor' %}" method="post">
+        {% csrf_token %}        
+        <a href="doctor_master_page_get">Home</a>
+        <a href="#doctor_master_page_get">Get Patient Details</a>  
+        <a href="doctor_master_page_get" onclick="return theFunction();">Item</a>       
+        <select name="selectpn" id="selectpn">
+        <option value="" disabled selected>Choose Patient</option>
+        {% for i in patientname%}        
+        <option value="{{i.patientname}}" selected="patientname">{{i.patientname}}</option>
+        {% endfor%}
+        </select>
+        <input type="submit" value="Get details">
+        <a href="add_patient">Add Patient</a>
+        <a href="book_appointment">Book New Appointment</a>
+        <a href="get_my_appointment">Get My Appointments</a>
+    </form>
+    </div>
+
+    <div>
+    
+</div>
+    
+</body>
+</html>

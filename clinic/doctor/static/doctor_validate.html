@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Login</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet"
+          href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <h2>Login in</h2>
+    <div class="validate">
+    <form id="validate" method="POST" action="{% url 'validate_doctor' %}" style="max-width:550px;margin:auto">
+    {% csrf_token %}
+    <div class="input-icons">
+        <i class="fa fa-user icon">
+        </i>
+    <label for="doctorname">Doctor Name</label>
+    
+    <input class="input-field" type="text" name="doctorname" autocomplete="off"></input>
+    </div>
+    <br>
+    <br>
+    <div class="input-icons">
+        <i class="fa fa-key icon"></i>
+        </i>
+    <label for="password" font="calibiri">Password:</label>
+    <input class="input-field" type="password" name="password" autocomplete="off"></input>
+    </div>
+    <div class="input-icons">
+        <i class="fa fa-key icon">
+        </i>
+    <label for="Mobile" font="calibiri">Mobile:</label>
+    <input class="input-field" type="number" name="doctormobile" autocomplete="off"></input>
+    </div>
+    <button>Submit</button>
+    </form>
+    </div>
+    <button type="submit"><a href=".">Home</a></button>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="register" method="POST" action="{% url 'patient_register' %}">
+        {% csrf_token %}
+        <label for="name">Patient Name:</label>
+        <input type="text" name="patientname" id="patientname">
+        <br>
+        <br>
+        <!--<label for="patienttreatment">Treatment</label>-->
+        <label for="Select Treatement:" name="patientname" id="patienttreatment"></label>
+        <select name="patienttreatment" id="patienttreatment">
+          <option value="root_canal">Root Canal</option>
+          <option value="cleaning">Cleaning</option>
+          <option value="Teethremove">Teeth Removing</option>
+        </select>
+    
+        <label for="patientdate">Choose Date:</label>
+        <input type="date" id="patientdate" name="patientdate">
+        
+        <label for="patienttime">Choose Time:</label>
+        <select name="patienttime" id="patienttime">
+            <option value="12am">12 AM</option>
+            <option value="01am">01 AM</option>
+            <option value="02am">02 AM</option>
+            <option value="03am">03 AM</option>
+            <option value="04am">04 AM</option>
+            <option value="05am">05 AM</option>
+            <option value="06am">06 AM</option>
+            <option value="07am">07 AM</option>
+            <option value="08am">08 AM</option>
+            <option value="09am">09 AM</option>
+            <option value="10am">10 AM</option>
+            <option value="11am">11 AM</option>
+            <option value="12pm">12 PM</option>
+            <option value="01pm">13 PM</option>
+            <option value="02pm">14 PM</option>
+            <option value="03pm">15 PM</option>
+            <option value="04pm">16 PM</option>
+            <option value="05pm">17 PM</option>
+            <option value="06pm">18 PM</option>
+            <option value="07pm">19 PM</option>
+            <option value="08pm">20 PM</option>
+            <option value="09pm">21 PM</option>
+            <option value="10pm">22 PM</option>
+            <option value="11pm">23 PM</option>
+            <option value="12pm">24 PM</option>
+          </select>
+        <!--<input type="text" placeholder="Search.." name="patienttreatment" id="patienttreatment">-->
+    
+        <button type="submit">Submit</button> 
+        <button type="submit"><a href=".">Home</a></button>
+         
+        </form>
+</body>
+</html>
